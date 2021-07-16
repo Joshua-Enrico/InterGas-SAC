@@ -350,19 +350,21 @@
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/counterup/counterup.min.js"></script>
         <script>
-            var portfolioIsotope = $('.portfolio-container').isotope({
-                itemSelector: '.portfolio-item',
-                layoutMode: 'fitRows',
-                resizeContainer: false
-            });
-        
-            $('#portfolio-flters li').on('click', function () {
-                $("#portfolio-flters li").removeClass('filter-active');
-                $(this).addClass('filter-active');
-        
-                portfolioIsotope.isotope({filter: $(this).data('filter')});
-            });
-            
+            jQuery(document).ready(function ($) {
+                setTimeout(function(){ 
+                    var portfolioIsotope = $('.portfolio-container').isotope({
+                        itemSelector: '.portfolio-item',
+                        layoutMode: 'fitRows'
+                    });
+                
+                    $('#portfolio-flters li').on('click', function () {
+                        $("#portfolio-flters li").removeClass('filter-active');
+                        $(this).addClass('filter-active');
+                
+                        portfolioIsotope.isotope({filter: $(this).data('filter')});
+                    });
+        }, 500);
+    });
         </script>
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
