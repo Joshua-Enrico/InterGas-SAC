@@ -154,7 +154,7 @@
                         </div>
                     </div>
                     <div class="row portfolio-container">
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-wow-delay="0.1s">
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item" data-wow-delay="3.4s">
                             <div class="portfolio-warp">
                                 <div class="portfolio-img">
                                     <img src="img/portfolio-1.jpg" alt="Image">
@@ -350,14 +350,19 @@
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/counterup/counterup.min.js"></script>
         <script>
-            var $grid = $('.portfolio-container').isotope({
-                // options
-              });
-              // filter items on button click
-              $('.col-12').on( 'click', 'li', function() {
-                var filterValue = $(this).attr('data-filter');
-                $grid.isotope({ filter: filterValue });
-              });
+            var portfolioIsotope = $('.portfolio-container').isotope({
+                itemSelector: '.portfolio-item',
+                layoutMode: 'fitRows',
+                resizeContainer: false
+            });
+        
+            $('#portfolio-flters li').on('click', function () {
+                $("#portfolio-flters li").removeClass('filter-active');
+                $(this).addClass('filter-active');
+        
+                portfolioIsotope.isotope({filter: $(this).data('filter')});
+            });
+            
         </script>
         <!-- Template Javascript -->
         <script src="js/main.js"></script>

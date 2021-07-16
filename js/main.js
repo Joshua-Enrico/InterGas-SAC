@@ -118,10 +118,7 @@
             }
         }
     });
-    
-    
+
     // Portfolio isotope and filter
-
-
 })(jQuery);
 
