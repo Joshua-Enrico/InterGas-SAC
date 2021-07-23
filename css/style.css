@@ -2257,7 +2257,7 @@ a:focus {
   
     -webkit-animation-duration:1s;
     -moz-animation-duration:1s;
-    animation-duration:3s;
+    animation-duration:1s;
 }
 .btn-wsp:hover{
     background: #20ba5a;
