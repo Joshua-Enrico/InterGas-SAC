@@ -1245,6 +1245,10 @@ a:focus {
     text-align: center;
     margin-bottom: 30px;
 }
+.blog .blog-item ul {
+    text-align: left;
+    margin-left: -30px;
+}
 
 .blog .blog-img {
     position: relative;
@@ -1331,7 +1335,7 @@ a:focus {
 
 .blog .blog-text {
     padding: 10px 25px 25px 25px;
-    background: #f3f6ff;
+    background: #f3f6ff00;
 }
 
 .blog .blog-text p {
