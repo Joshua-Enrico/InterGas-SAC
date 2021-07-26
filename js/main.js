@@ -85,7 +85,7 @@
         asNavFor: '.testimonial-slider-nav'
     });
     $('.testimonial-slider-nav').slick({
-        arrows: false,
+        arrows: true,
         dots: false,
         focusOnSelect: true,
         centerMode: true,
@@ -119,6 +119,21 @@
         }
     });
 
-    // Portfolio isotope and filter
+    // acortion
+
+    const accordionItemHeaders = document.querySelectorAll(".blog .blog-title");
+    accordionItemHeaders.forEach(accordionItemHeader => {
+        accordionItemHeader.addEventListener("click", event => {
+            accordionItemHeader.classList.toggle("active");
+            const accordionItemBody = accordionItemHeader.nextElementSibling;
+            if(accordionItemHeader.classList.contains("active")) {
+              accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+            }
+            else {
+              accordionItemBody.style.maxHeight = 0;
+            }
+            
+          });
+        });
 })(jQuery);
 
