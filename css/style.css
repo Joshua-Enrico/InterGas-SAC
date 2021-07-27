@@ -2180,6 +2180,10 @@ a:focus {
     margin-bottom: 45px;
 }
 
+.footer .container .row {
+    display: flex;
+    justify-content: center;
+}
 .footer h2 {
     position: relative;
     margin-bottom: 20px;
