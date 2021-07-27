@@ -1143,7 +1143,7 @@ a:focus {
 /*******************************/
 .testimonial {
     position: relative;
-    margin: 45px 0;
+    margin: 45px 0 -50px 0;
     padding: 90px 0;
     text-align: center;
     background: linear-gradient(rgba(3, 15, 39, .9), rgba(3, 15, 39, .9)), url(../img/carousel-1.jpg);
@@ -1263,6 +1263,7 @@ a:focus {
 .blog .blog-title {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 60px;
     background: #030f27;
     overflow: hidden;
@@ -1272,19 +1273,8 @@ a:focus {
     position: relative;
 }
 
-.blog .blog-title::after {
-    content: "\002B";
-    font-size: 2rem;
-    position: absolute;
-    right: 1rem;
-  }
-
-  .blog .blog-title.active::after {
-    content: "\2212";
-  }
 
   .blog .blog-text {
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
   }
@@ -1294,42 +1284,37 @@ a:focus {
     border-top: 1px solid;
     border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
   }
-
+  .blog .text_body a.btn {
+    position: relative;
+    margin-top: 15px;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #030f27;
+    border-radius: 0;
+    background: var(--first-color);
+    transition: .3s;
+}
+.blog .text_body a.btn:hover {
+    color: var(--first-color);
+    background: #030f27;
+}
 
 
 
 .blog .blog-title h3 {
     margin: 0;
-    padding: 0 15px 0 25px;
-    width: calc(100% - 60px);
-    font-size: 18px;
+    padding: 0 15px 0;
+    font-size: 12px;
     font-weight: 700;
     color: var(--first-color);
-    text-align: left;
+    text-align: center;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.blog .blog-title a.btn {
-    width: 60px;
-    height: 60px;
-    padding: 3px 0 0 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-    line-height: 60px;
-    font-weight: 100;
-    color: #030f27;
-    background: var(--first-color);
-    border-radius: 0;
-    transition: .3s;
-}
-
-.blog .blog-item:hover a.btn {
-    color: #ffffff;
-}
 
 .blog .blog-meta {
     position: relative;
