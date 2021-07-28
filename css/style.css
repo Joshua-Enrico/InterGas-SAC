@@ -362,6 +362,7 @@ a:focus {
     border: 2px solid #ffffff;
     border-radius: 0;
     transition: .3s;
+    border-radius: 5px;
 }
 
 .carousel .carousel-caption .btn:hover {
