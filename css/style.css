@@ -4,12 +4,17 @@
 
 
 :root {
-    --first-color: #fdbe33;
+    --first-color: #e6e6e6;
     --second-color: #030f27;
+    --thirt-color: #b2afd7;/**#932e27***/
+    --fourth-color: #3e4095;
+    --fifth-color: #bf392f;
     --text-color: #666666;
     --text-color-white: #ffffff;
     background-color: rgb(248, 248, 248);
     --colorback: rgba(70, 57, 30, 0.09);
+    --white-color: #ffffff;
+    --black-color: black;
     
   }
 
@@ -31,7 +36,7 @@ h3,
 h4,
 h5, 
 h6 {
-    color: var(--second-color);
+    color: var(--fourth-color);
 }
 
 a {
@@ -94,11 +99,11 @@ a:focus {
 .top-bar {
     position: relative;
     height: 90px;
-    background: var(--first-color);
+    background: var(--white-color);
 }
 
 .top-bar .logo {
-    padding: 15px 0;
+    padding: 15px 0 0 70px;
     text-align: left;
     overflow: hidden;
 }
@@ -135,29 +140,32 @@ a:focus {
         font-size: 30px;
     }
 }
-
+@media (max-width: 500px) {
+    .top-bar {
+        display: none;
+    }
+}
 .top-bar .logo img {
     max-width: 100%;
-    max-height: 60px;
+    max-height: 70px;
 }
 
 .top-bar .top-bar-item {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .top-bar .top-bar-icon {
-    width: 40px;
+    width: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .top-bar .top-bar-icon [class^="flaticon-"]::before {
     margin: 0;
-    color: var(--second-color);;
-    font-size: 40px;
+    color: var(--fifth-color);;
+    font-size: 60px;
 }
 
 .top-bar .top-bar-text {
@@ -177,11 +185,13 @@ a:focus {
     font-size: 13px;
     font-weight: 400;
 }
+.top-bar .row {
+    justify-content: space-around;
+}
+
 
 @media (min-width: 992px) {
-    .top-bar {
-        padding: 0 60px;
-    }
+
 }
 
 @media (max-width: 991.98px) {
@@ -196,7 +206,7 @@ a:focus {
 /**********************************/
 .nav-bar {
     position: relative;
-    background: var(--first-color);
+    background: var(--white-color);
     transition: .3s;
 }
 
@@ -211,10 +221,16 @@ a:focus {
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
     z-index: 999;
 }
-
+.navbar-toggler {
+    background-color: var(--fifth-color);
+}
 .nav-bar .navbar {
     height: 100%;
-    background: var(--second-color) !important;
+    background: var(--white-color) !important;
+}
+.nav-bar  img {
+    max-width: 100%;
+    max-height: 70px;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -222,17 +238,17 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 10px 8px 10px;
-    color: var(--text-color-white);
+    color: var(--black-color);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: var(--first-color);
+    color: var(--fifth-color);
     transition: none;
 }
 .dropdown-item.active {
     background-color: #92272700;
-    color: var(--first-color);
+    color: var(--fifth-color);
 }
 
 .nav-bar .dropdown-menu {
@@ -243,15 +259,50 @@ a:focus {
 }
 
 .nav-bar .btn {
-    color: var(--text-color-white);
-    border: 2px solid var(--text-color-white);
-    border-radius: 5px;
+    color: var(--white-color);
+    border: 2px solid var(--fifth-color);
+    border-radius: 25px;
+    background-color: var(--fifth-color);
 }
 
+@media (max-width: 992px) {
+    .top-bar {
+        display: none;
+    }
+
+}
+@media (min-width: 992px) {
+    .nav-bar {
+        padding: 0 75px;
+    }
+    .nav-bar img {
+        margin: -92px auto auto -11px;
+        max-width: 100%;
+        max-height: 70px;
+        transition: margin 1s;
+
+    }
+    .nav-sticky img {
+        margin: -19px auto auto 10px;
+    }
+}
+
+
+
 .nav-bar .btn:hover {
-    color: var(--second-color);
-    background: var(--first-color);
-    border-color: var(--first-color);
+    color: var(--white-color);
+    background: #b1271e;
+    border-color: #b1271e;
+}
+@media (min-width: 992px){
+    .navbar-collapse {
+        flex-grow: 1;
+        transition: flex-grow 1s;
+    }
+    
+    .nav-sticky .navbar-collapse {
+        flex-grow: 0;
+    }
 }
 .dropdown-menu a {
     display: block;
@@ -266,14 +317,18 @@ a:focus {
 }
 
 .dropdown-menu a:hover {
-    color: var(--first-color);
+    color: var(--fifth-color);
 }
 
+
 @media (min-width: 992px) {
-    .nav-bar {
-        padding: 0 75px;
+
+    .navbar-expand-lg {
+        justify-content: flex-end;
     }
-    
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        border-radius: 20px;
+    }
     .nav-bar.nav-sticky {
         padding: 0;
         border-radius: 0 0 0 0;
@@ -444,8 +499,7 @@ a:focus {
 /*******************************/
 .page-header {
     position: relative;
-    margin-bottom: 45px;
-    padding: 90px 0;
+
     text-align: center;
     background:var(--first-color)#fdbe33;
 }
@@ -534,7 +588,7 @@ a:focus {
 }
 
 .section-header p {
-    color: var(--first-color);
+    color: var(--fifth-color);
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -732,7 +786,7 @@ a:focus {
     margin: 0;
     font-size: 60px;
     line-height: 60px;
-    background-image: linear-gradient(var(--text-color-white), var(--first-color));
+    background-image: linear-gradient(var(--text-color-white), var(--fifth-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -743,7 +797,7 @@ a:focus {
 }
 
 .fact .fact-right .fact-icon [class^="flaticon-"]::before {
-    background-image: linear-gradient(var(--text-color-white), var(--second-color));
+    background-image: linear-gradient(var(--text-color-white), var(--fourth-color));
 }
 
 .fact .fact-left,
@@ -1235,6 +1289,7 @@ a:focus {
     position: relative;
     width: 300px;
     margin: 0 auto;
+    display: flex;
 }
 
 .testimonial .testimonial-slider-nav .slick-slide {
@@ -1255,11 +1310,10 @@ a:focus {
 
 .testimonial .testimonial-slider-nav .slick-slide img {
     position: relative;
-    display: block;
+    display: flex;
     margin-top: 37px;
     width: 100%;
     height: auto;
-    border-radius: 100px;
 }
 
 .testimonial .testimonial-slider {
@@ -1268,15 +1322,7 @@ a:focus {
     padding-top: 50px;
 }
 
-.testimonial .testimonial-slider::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 50px;
-    top: 0;
-    left: calc(50% - 30px);
-    background: url(../img/quote.png) top center no-repeat;
-}
+
 
 .testimonial .testimonial-slider h3 {
     color: var(--first-color);
@@ -1311,6 +1357,24 @@ a:focus {
 .blog-page {
     display: flex;
     justify-content:  center;
+}
+.blog-page2 {
+    display: flex;
+    justify-content:  space-evenly;
+
+}
+.blog-page2 img {
+    border-radius: 100px;
+    width: 70%;
+    margin-bottom: 45px;
+}
+.testimonio {
+    background-color: var(--second-color);
+    background: linear-gradient(rgba(3, 15, 39, .9), rgba(3, 15, 39, .9)), url(../img/carousel-1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .blog .blog-item {
@@ -1358,6 +1422,7 @@ a:focus {
     overflow: hidden;
     transition: max-height 0.5s ease-out;
   }
+  
   .blog .text_body {
     padding: 2rem;
     line-height: 1.5rem;
@@ -1383,7 +1448,7 @@ a:focus {
 }
 .blog .text_body a.btn:hover {
     color: var(--first-color);
-    background: var(--second-color);
+    background: #bf392f;
 }
 
 
@@ -1398,6 +1463,10 @@ a:focus {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.text-test h2{
+    color: var(--first-color)
 }
 
 @media(max-width: 1560.98px) {
@@ -2239,7 +2308,7 @@ a:focus {
     height: 2px;
     left: 0;
     bottom: 0;
-    background: var(--first-color);
+    background: var(--fifth-color);
 }
 
 .footer .footer-link a {
