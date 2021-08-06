@@ -191,6 +191,9 @@ a:focus {
 
 
 @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        margin: auto auto auto -200px;
+    }
 
 }
 
@@ -499,7 +502,6 @@ a:focus {
 /*******************************/
 .page-header {
     position: relative;
-
     text-align: center;
     background:var(--first-color)#fdbe33;
 }
