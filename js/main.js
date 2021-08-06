@@ -29,8 +29,6 @@
             $('.carousel, .page-header').css("margin-top", "0");
         }
     });
-    
-    
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
