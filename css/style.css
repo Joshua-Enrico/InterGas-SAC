@@ -2403,7 +2403,7 @@ a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: var(--first-color);
+    color: var(--fifth-color);
     letter-spacing: 1px;
 }
 
@@ -2522,7 +2522,7 @@ a:focus {
 }
 
 .footer .copyright p a:hover {
-    color: var(--text-color-white);
+    color: var(--fifth-color);
 }
 
 @media (max-width: 768px) {
