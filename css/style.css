@@ -287,7 +287,7 @@ a:focus {
         padding: 0 75px;
     }
     .nav-bar img {
-        margin: -92px auto auto -11px;
+        margin: -153px auto auto 0px;
         max-width: 100%;
         max-height: 70px;
         transition: margin 1s;
