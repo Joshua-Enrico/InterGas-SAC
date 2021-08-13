@@ -2218,7 +2218,36 @@ a:focus {
     color: var(--first-color);
     font-size: 40px;
 }
-
+.contact .contact-item [class^="fab"]::before {
+    margin: 0;
+    color: #1094f4;
+    font-size: 40px;
+}
+.contact .contact-item [class^="fab fa-linkedin"]::before {
+    margin: 0;
+    color: #0a66c2;
+    font-size: 40px;
+}
+.contact .contact-item [class^="fab fa-whatsapp-square"]::before {
+    margin: 0;
+    color: #00a356;
+    font-size: 40px;
+}
+.contact .contact-item [class^="fas fa-envelope-square"]::before {
+    margin: 0;
+    color: #b95555;
+    font-size: 40px;
+}
+.contact .contact-item [class^="fas fa-phone-square-alt"]::before {
+    margin: 0;
+    color: #0a66c2;
+    font-size: 40px;
+}
+.contact .contact-item [class^="flaticon-address 2"]::before {
+    margin: 0;
+    color: #74afeb;
+    font-size: 40px;
+}
 
 .contact .contact-text {
     position: relative;
@@ -2243,6 +2272,10 @@ a:focus {
     margin: 0;
     color: var(--text-color-white);
     font-size: 16px;
+}
+
+.contact .lef p {
+    color: var(--second-color);
 }
 
 .contact .contact-item:last-child {
