@@ -261,13 +261,11 @@ a:focus {
     background-color: #92272700;
     color: var(--fifth-color);
 }
-
-.nav-bar .dropdown-menu {
-    margin-top: 0;
-    border: 0;
-    border-radius: 0;
-    background: #f8f9fa;
+.dropdown-item:hover {
+    background-color: var(--background-color1);
+    border-radius: 10px;
 }
+
 
 .nav-bar .btn {
     color: var(--white-color);
@@ -329,9 +327,7 @@ a:focus {
     font-weight: 900;
 }
 
-.dropdown-menu a:hover {
-    color: var(--fifth-color);
-}
+
 
 
 @media (min-width: 992px) {
