@@ -761,6 +761,10 @@ a:focus {
     border-radius: 5px;
 }
 
+.about .about-text .fix {
+    margin-bottom: 15px;
+}
+
 .about .about-text a.btn:hover {
     color: var(--first-color);
     background: var(--second-color);
@@ -769,6 +773,7 @@ a:focus {
 .backgrd {
     background-color: var(--background-color1);
 }
+
 
 
 .cent {
@@ -2248,7 +2253,20 @@ a:focus {
     color: #74afeb;
     font-size: 40px;
 }
+.contact .contact-item [class^="fab fa-twitter-square"]::before {
+    margin: 0;
+    color: rgb(0 167 231);
+    font-size: 40px;
+}
+.contact .contact-item [class^="fab fa-youtube"]::before {
+    margin: 0;
+    color: rgb(246 0 0);
+    font-size: 40px;
+}
 
+.contact .lf p {
+    padding-top: 9px;
+}
 .contact .contact-text {
     position: relative;
     width: auto;
