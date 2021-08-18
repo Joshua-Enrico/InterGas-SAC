@@ -274,6 +274,13 @@ a:focus {
     background-color: var(--fifth-color);
 }
 
+@media (max-width: 540px) {
+    .dropdown-menu {
+        font-size: 10px;
+    }
+
+}
+
 @media (max-width: 992px) {
     .top-bar {
         display: none;
