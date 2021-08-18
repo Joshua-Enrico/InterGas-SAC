@@ -276,10 +276,36 @@ a:focus {
 
 @media (max-width: 540px) {
     .dropdown-menu {
+        font-size: 15px;
+    }
+
+}
+@media (max-width: 500px) {
+    .dropdown-menu {
+        font-size: 12px;
+    }
+
+}
+@media (max-width: 415px) {
+    .dropdown-menu {
         font-size: 10px;
     }
 
 }
+@media (max-width: 333px) {
+    .dropdown-menu {
+        font-size: 8px;
+    }
+
+}
+@media (max-width: 272px) {
+    .dropdown-menu {
+        font-size: 6px;
+    }
+
+}
+
+
 
 @media (max-width: 992px) {
     .top-bar {
