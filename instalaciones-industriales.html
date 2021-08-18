@@ -9,6 +9,10 @@
     <meta content="Tramitación y obtención de SFS con la concesionaria
     Elaboración del Proyecto Integral Gas 1,2 (PIG 1 y PIG 2)..." name="description">
     <link rel="icon" href="img/logos/flame.png">
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="https://connect.facebook.net">
+    <link rel="preload" href="https://www.facebook.com">
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -438,27 +442,8 @@
     <!-- Your plugin del chat code -->
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
-
-    <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "102859152094991");
-        chatbox.setAttribute("attribution", "biz_inbox");
-
-        window.fbAsyncInit = function () {
-            FB.init({
-                xfbml: true,
-                version: 'v11.0'
-            });
-        };
-
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
