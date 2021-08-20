@@ -2292,6 +2292,16 @@ a:focus {
     color: rgb(246 0 0);
     font-size: 40px;
 }
+.contact .contact-item [class^="fas fa-file-signature"]::before {
+    margin: 0;
+    color: rgb(136 75 75);
+    font-size: 35px;
+}
+.contact .contact-item [class^="fas fa-comment-dots"]::before {
+    margin: 0;
+    color: rgb(93 126 175);
+    font-size: 35px;
+}
 
 .contact .lf p {
     padding-top: 9px;
@@ -2607,6 +2617,51 @@ a:focus {
     -moz-animation-duration:1s;
     animation-duration:1s;
 }
+.contact__form {
+    width: 360px;
+}
+.contact__input{
+    width: 100%;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi);
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1.5px solid var(--second-color);
+    outline: none;
+    margin-bottom: var(--mb-4);
+}
+.contact__container{
+    justify-items: center;
+}
+.contact__button{
+    display: flex;
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+    margin-left: auto;
+}
+.button {
+    background-color: var(--second-color);
+    color: #fff;
+    padding: 0.75rem 2.5rem;
+    font-weight: var(--font-semi);
+    border-radius: 0.5rem;
+  }
+
+.middle {
+    justify-content: space-around
+}
+.middle .contact-info {
+    padding: 0;
+}
+.format1 {
+    padding: 0;
+}
+  
+  .button:hover {
+    box-shadow: 0 10px 36px rgb(117, 117, 117);
+  }
 .btn-wsp:hover{
     background: #20ba5a;
 }
