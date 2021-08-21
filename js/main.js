@@ -96,6 +96,5 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-    sr.reveal('.contact__input',{interval: 200})
 })(jQuery);
 
